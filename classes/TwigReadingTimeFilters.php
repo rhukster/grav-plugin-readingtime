@@ -7,10 +7,12 @@ use RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator;
 class TwigReadingTimeFilters extends \Twig_Extension
 {
   private $grav;
+  private $config;
 
   public function __construct()
   {
       $this->grav = Grav::instance();
+      $this->config = $this->grav['config'];
   }
 
   public function getName()
